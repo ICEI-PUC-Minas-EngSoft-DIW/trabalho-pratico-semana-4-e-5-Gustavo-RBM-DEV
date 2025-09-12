@@ -51,7 +51,7 @@ nav a:hover {
 
 /* Banner */
 .banner {
-    background: url('../imagens/banner.png') no-repeat center/cover;
+    background: url("imagens/banner.png") no-repeat center/cover;
     height: 300px;
     border-bottom: 4px solid #ffcc00;
 }
@@ -148,7 +148,7 @@ form button {
 
 form button:hover {
     background: #ffaa00;
-
+} 
 /* Rodapé */
 footer {
     background: #111;
