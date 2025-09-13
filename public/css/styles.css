@@ -49,7 +49,7 @@ nav a:hover {
     color: #111;
 }
 
-/* Banner */
+
 .banner {
     background: url("imagens/banner.jpg") center/cover no-repeat;
     min-height: 40pvh;
@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 
-/* Seções */
+
 main section {
     padding: 40px 10%;
 }
@@ -75,7 +75,7 @@ main h2 {
     padding-left: 10px;
 }
 
-/* Cards gerais */
+
 .consoles, .jogos, .noticias {
     display: grid;
     grid-template-columns: 1fr; 
@@ -118,7 +118,7 @@ article h3 {
     font-size: 1.2rem;
 }
 
-/* Seção de contato */
+
 .contato {
     text-align: center;
     background: #111;
@@ -167,7 +167,7 @@ form button {
 form button:hover {
     background: #ffaa00;
 } 
-/* Rodapé */
+
 footer {
     background: #111;
     text-align: center;
@@ -176,4 +176,102 @@ footer {
     margin-top: 40px;
     font-size: 0.9rem;
     color: #aaa;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    .banner img {
+        height: auto;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input, form button {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        border-radius: 10px;
+        padding: 8px;
+        background-color: #000;
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 376px) {
+    nav {
+        flex-direction: column-reverse;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        max-width: 120px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    article img {
+        max-width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 321px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        max-width: 240px;
+    }
+
+    .banner img {
+        max-width: 300px;
+    }
+
+    article img {
+        max-width: 200px;
+    }
+
+    article h3 {
+        font-size: 1rem;
+    }
+
+    article p {
+        font-size: 0.9rem;
+    }
 }
