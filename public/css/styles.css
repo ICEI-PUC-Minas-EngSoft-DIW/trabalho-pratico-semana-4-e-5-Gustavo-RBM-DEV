@@ -22,7 +22,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: #ffcc00;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px #000;
@@ -51,10 +51,16 @@ nav a:hover {
 
 /* Banner */
 .banner {
-    background: url("imagens/banner.png") no-repeat center/cover;
-    height: 300px;
+    background: url("imagens/banner.jpg") center/cover no-repeat;
+    min-height: 40pvh;
     border-bottom: 4px solid #ffcc00;
 }
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* Seções */
 main section {
@@ -72,8 +78,20 @@ main h2 {
 /* Cards gerais */
 .consoles, .jogos, .noticias {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr; 
     gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .consoles, .jogos, .noticias {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .consoles, .jogos, .noticias {
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
 article {
